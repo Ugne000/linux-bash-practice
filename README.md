@@ -54,4 +54,4 @@ Server (500) errors:
 
 ### What I learned
 
-(write this part yourself, see below)
+This is some practis on bash :)

@@ -9,3 +9,7 @@ wc -l < "$LOGFILE"
 echo ""
 echo "Requests per status code:"
 awk '{print $9}' "$LOGFILE" | sort | uniq -c | sort -rn
+
+echo ""
+echo "Top 5 IP addresses:"
+awk '{print $1}' "$LOGFILE" | sort | uniq -c | sort -rn | head -5

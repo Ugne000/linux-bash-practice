@@ -1,7 +1,20 @@
 #!/bin/bash
 # analyze_log.sh - prints a summary of a web server log file
+# Usage: ./analyze_log.sh <logfile>
 
 LOGFILE="$1"
+
+# Check that a file name was given
+if [ -z "$LOGFILE" ]; then
+  echo "Usage: $0 <logfile>"
+  exit 1
+fi
+
+# Check that the file exists
+if [ ! -f "$LOGFILE" ]; then
+  echo "Error: file '$LOGFILE' not found"
+  exit 1
+fi
 
 echo "Total requests:"
 wc -l < "$LOGFILE"

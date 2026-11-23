@@ -1,6 +1,6 @@
 #!/bin/bash
 # analyze_log.sh - prints a summary of a web server log file
-# Usage: ./analyze_log.sh <logfile>
+# Usage: ./analyze_log.sh <logfilename>
 
 LOGFILE="$1"
 
